@@ -52,7 +52,7 @@ function execute_cmd()
 	"make")
 		echo "Building image: $ARCH_IMAGE"
 		GIT_COMMIT=$(git rev-list -1 HEAD)
-		docker build . -t $ARCH_IMAGE --build-arg GIT_COMMIT=$GIT_COMMIT
+		docker build . -t $ARCH_IMAGE --build-arg="GIT_COMMIT=$GIT_COMMIT" $@
 	;;
 	"push")
 		echo "Pushing images"
@@ -76,8 +76,9 @@ validate_input_cmd $1
 if [ $# -lt 1 ]; then
 	input_cmd=make
 else
-	input_cmd=$1
+	 input_cmd=$1
+    shift
 fi
 
-execute_cmd
+execute_cmd $@
 

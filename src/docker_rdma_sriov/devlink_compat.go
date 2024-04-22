@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Mellanox/sriovnet"
+	"github.com/k8snetworkplumbingwg/sriovnet"
 	"github.com/spf13/cobra"
 	"path/filepath"
 	"strings"

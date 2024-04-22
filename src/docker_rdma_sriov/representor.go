@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Mellanox/sriovnet"
+	"github.com/k8snetworkplumbingwg/sriovnet"
 	"github.com/vishvananda/netlink"
 	"strconv"
 )

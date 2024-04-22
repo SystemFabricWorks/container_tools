@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/Mellanox/rdmamap"
-	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/api/types/container"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -14,7 +14,7 @@ func DumpAllContainersRdmaStats() {
 	if err != nil {
 		return
 	}
-	containers, err := cli.ContainerList(context.Background(), types.ContainerListOptions{})
+	containers, err := cli.ContainerList(context.Background(), container.ListOptions{})
 	if err != nil {
 		fmt.Println("Fail to get container list", err)
 		return

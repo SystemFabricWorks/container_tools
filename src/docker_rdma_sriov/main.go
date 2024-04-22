@@ -9,14 +9,14 @@ import (
 )
 
 const (
-	appVersion = "0.0.5"
+	appVersion = "0.0.5-1"
 )
 
 var GitCommitId string
 
 func getRightClientApiVersion() (string, error) {
 	// Start with the lowest API to query which version is supported.
-	lowestCli, err3 := client.NewClientWithOpts(client.FromEnv, client.WithVersion("1.12"))
+	lowestCli, err3 := client.NewClientWithOpts(client.FromEnv, client.WithVersion("1.24"))
 	if err3 != nil {
 		fmt.Println("Fail to create client: ", err3)
 		return "", err3

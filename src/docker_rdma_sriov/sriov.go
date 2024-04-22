@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/Mellanox/rdmamap"
-	"github.com/Mellanox/sriovnet"
+	"github.com/k8snetworkplumbingwg/sriovnet"
 	"github.com/spf13/cobra"
 	"github.com/vishvananda/netlink"
 	"github.com/vishvananda/netns"
