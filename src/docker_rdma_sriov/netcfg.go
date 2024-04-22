@@ -26,7 +26,7 @@ func listNdevNetcfgFunc(cmd *cobra.Command, args []string) {
 	// Lock the OS Thread so we don't accidentally switch namespaces
 	runtime.LockOSThread()
 	defer runtime.UnlockOSThread()
-
+	containerId = args[0]
 	nsHandle, err := netns.GetFromDocker(containerId)
 	if err != nil {
 		fmt.Println("Invalid container id: ", containerId)
@@ -44,9 +44,9 @@ func listNdevNetcfgFunc(cmd *cobra.Command, args []string) {
 		netns.Set(originalHandle)
 		return
 	}
-	fmt.Printf("Net Interfaces: \n", ifaces)
+	fmt.Printf("Net Interfaces: \n")
 	for _, iface := range ifaces {
-		fmt.Printf("%v\n", iface)
+		fmt.Printf("\tNIC: %v\n", iface)
 	}
 	fmt.Printf("\n")
 

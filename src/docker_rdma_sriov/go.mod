@@ -9,12 +9,12 @@ replace google.golang.org/genproto/googleapis/rpc => google.golang.org/genproto/
 replace google.golang.org/genproto => google.golang.org/genproto v0.0.0-20240227224415-6ceb2ff114de
 
 require (
-	github.com/Mellanox/rdmamap v1.1.0
+	github.com/Mellanox/rdmamap v1.1.1-0.20230906090736-d8230af2dc58
 	github.com/docker/docker v26.0.2+incompatible
 	github.com/k8snetworkplumbingwg/sriovnet v1.2.0
 	github.com/spf13/cobra v1.8.0
-	github.com/vishvananda/netlink v1.2.1-beta.2
-	github.com/vishvananda/netns v0.0.4
+	github.com/vishvananda/netlink v1.2.1-beta.2.0.20240411215012-578e95cc3190
+	github.com/vishvananda/netns v0.0.5-0.20240412164733-9469873f4601
 )
 
 require (
